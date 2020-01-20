@@ -36,7 +36,7 @@ def getMainHelperScript(ids):
             [f'"{i}": {{ h:0, s:0, v:50 }}'
             for i in ids])                   + \
     '};'                                     + \
-    f'let key = "{ids[0]}";' + \
+    f'let key = "{ids[-1]}";' + \
     '</script>'
 
 def getMainStyle():

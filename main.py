@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 from base64 import b64encode
 from resources import *
 
+#from DebugPrint import *
+
 def print_requirements():
     pass
 
@@ -30,12 +32,11 @@ def stack_XML_to_dict(xml):
     outline_layers = []
     color_layers = []
 
-    for outline in outlines[::-1]:
-        outline_layers.extend([e for e in outline.iter() if e.tag == 'layer'])
+    for outline in outlines:
+        outline_layers.extend([e for e in outline.iter() if e.tag == 'layer'][::-1])
 
-    for color in colors[::-1]:
-        color_layers.extend([e for e in color.iter() if e.tag == 'layer'])
-
+    for color in colors:
+        color_layers.extend([e for e in color.iter() if e.tag == 'layer'][::-1])
 
     viewbox_w, viewbox_h = image.attrib['w'], image.attrib['h']
     return {
@@ -82,10 +83,11 @@ def print_SVG_and_get_color_IDs(ora):
 def print_buttons(ids):
     """ids - [(int, str), ...]
     """
-    for ID,name in ids:
+    for ID,name in ids[::-1]:
         print (f'<button id="button{ID}">')
         print (name)
         print ('</button>')
+
 
 def main():
     if not sys.argv[1].endswith('.ora'):
