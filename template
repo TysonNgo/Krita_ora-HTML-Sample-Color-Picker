@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+$$STYLE_HERE$$
+</head>
+<body>
+   <div class="container">
+    <div class="image">
+$$SVG_HERE$$
+    </div>
+
+    <div class="color-selector">
+      <div id="color-selector">
+        <div id="color-selector-palette">
+          <div id="color-selector-palette-cursor"></div>
+          <div class="color-selector-lightness"></div>
+        </div>
+        <div id="color-selector-hue">
+          <div id="color-selector-hue-cursor"></div>
+        </div>
+      </div>
+      <div class="color-layer-container">
+$$BUTTONS_HERE$$
+      </div>
+    </div>
+
+  </div>
+
+$$SCRIPTS_HERE$$
+
+</body>
+</html>
