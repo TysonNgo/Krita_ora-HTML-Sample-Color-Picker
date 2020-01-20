@@ -44,9 +44,10 @@ function HSVtoFeColorMatrixRGB(h, s, v) {
 for (let id in hsv_values){
   document.getElementById('button'+id).onclick = (function(id){
     return function(){
+      document.getElementById('button'+key).classList.remove('selected');
       key = id;
       let hsv = hsv_values[id];
-      console.log(hsv);
+      this.classList.add('selected');
       CS.setHSV(hsv);
     };
   })(id);
@@ -60,6 +61,10 @@ CS.onchange = () => {
   hsv.v = CS.v;
   let rgb = HSVtoFeColorMatrixRGB(CS.h, CS.s, CS.v);
   matrix.children[0].setAttribute('values', `0 0 0 0 ${rgb.r} 0 0 0 0 ${rgb.g} 0 0 0 0 ${rgb.b} 0 0 0 1 0`);
+
+  let button = document.getElementById('button'+key);
+  button.style.background = `rgb(${rgb.r*255},${rgb.g*255},${rgb.b*255})`;
 };
 
 CS.setHSV(hsv_values[key]);
+document.getElementById('button'+key).classList.add('selected');
