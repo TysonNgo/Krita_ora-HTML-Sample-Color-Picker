@@ -28,6 +28,7 @@ svg{
   height: 100px;
   padding: 10px 20px;
   background: #1d1e21;
+  user-select: none;
 }
 .color-layer-container button{
   border-radius: 4rem;
@@ -41,6 +42,9 @@ svg{
   background: rgb(128,128,128);
   color: #cdcdcd;
   text-shadow: 0 2px rgba(10,10,10,.8);
+}
+.color-layer-container button:focus{
+  outline:none;
 }
 button.selected{
   border-color: #ffbe00;
