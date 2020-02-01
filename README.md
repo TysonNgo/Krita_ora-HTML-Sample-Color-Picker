@@ -10,7 +10,7 @@ Python 3.6+
 
 Given an OpenRaster Image (.ora) file with a specific layer arrangement, this script generates an HTML file that contains your art and a color picker that allows the user to change the color of a selected region of the art. Useful for when you might be drawing something for someone and you do not know what the base colors should be, so you can send them the generated HTML file which they can open in Google Chrome to play around with different colors.
 
-#### // TODO add gif demoing generated html
+![the generated HTML file](/demo/htmlDemo.gif)
 
 # How to use
 
