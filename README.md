@@ -20,7 +20,14 @@ You will need to export your Krita document (.kra) as an OpenRaster Image (.ora)
 
 - a group layer named "color", which includes paint layers for individual sections of the drawing (for example, a layer for a shirt, and a separate layer for pants); give these layers meaningful names; these can all be one color.
 
-#### // TODO add image
+![](/demo/howToUse001.png)
+
+You may need to decrease the resolution of the image if it is too large, otherwise the output HTML file will be massive.
+
+![scale the image](/demo/howToUse002.png)
+
+
+
 
 When you have the .ora file that satisfies the above conditions, you can run the python script in the console:
 
